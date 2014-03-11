@@ -28,6 +28,8 @@ Welcome to the ActivEngage Tech Interview.  This portion is designed to give us 
 4. The client-side Form Hub module has been created
 
 ## Steps that you must complete
+1. Fork this repository
+2. Clone the repository locally
 1. Remove the flickr viewmodel and view
 2. Create a form viewmodel and view 
 3. Fill in the server-side FormHub code to retrieve existing forms
@@ -35,5 +37,7 @@ Welcome to the ActivEngage Tech Interview.  This portion is designed to give us 
 5. Create an Add Form dialog
 6. Show completed forms
 7. Publish a signalr event when a form is added
+8. Commit your changes
+9. Create a Pull Request
  
 
