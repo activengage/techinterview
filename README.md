@@ -28,11 +28,12 @@ Welcome to the ActivEngage Tech Interview.  This portion is designed to give us 
 4. The client-side Form Hub module has been created
 
 ## Steps that you must complete
-1. Create a form viewmodel and view 
-2. Fill in the server-side FormHub code to retrieve existing forms
-3. Create an Add Form hubmethod on the server and client
-4. Create an Add Form dialog
-5. Show completed forms
-6. Publish a signalr event when a form is added
+1. Remove the flickr viewmodel and view
+2. Create a form viewmodel and view 
+3. Fill in the server-side FormHub code to retrieve existing forms
+4. Create an Add Form hubmethod on the server and client
+5. Create an Add Form dialog
+6. Show completed forms
+7. Publish a signalr event when a form is added
  
 
