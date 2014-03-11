@@ -181,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\main.js" />
+    <Content Include="App\modules\formHub.js" />
     <Content Include="App\viewmodels\flickr.js" />
     <Content Include="App\viewmodels\shell.js" />
     <Content Include="App\viewmodels\welcome.js" />
