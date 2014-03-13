@@ -1,10 +1,10 @@
-using System;
 using System.Web.Optimization;
+using ActivEngage.TechInterview.Web;
 
 [assembly: WebActivator.PostApplicationStartMethod(
-    typeof(ActivEngage.TechInterview.Web.App_Start.DurandalConfig), "PreStart")]
+    typeof(DurandalConfig), "PreStart")]
 
-namespace ActivEngage.TechInterview.Web.App_Start
+namespace ActivEngage.TechInterview.Web
 {
     public static class DurandalConfig
     {
