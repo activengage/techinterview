@@ -12,10 +12,20 @@
         activate: function () { },
         submit: function () {
             var that = this;
-            return formHub.formAdded(ko.toJS(that.form));//.then(function (results) {
-                //console.log(results);
-                //that.forms(results);
-            //});
+            if (that.form.FirstName() != undefined && that.form.LastName() != undefined && that.form.EmailAddress() != undefined && that.form.Comments() != undefined)
+            {
+                return formHub.formAdded(ko.toJS(that.form)).then(function () {
+                    that.form.FirstName(null);
+                    that.form.LastName(null);
+                    that.form.EmailAddress(null);
+                    that.form.Comments(null);
+                    app.showMessage('Your form has been submitted successfully', 'Success', ['Ok']);
+                });
+            }
+            else
+            {
+                return app.showMessage('You must complete the form', 'Oops!', ['Ok']);
+            }
         }
 
     };
