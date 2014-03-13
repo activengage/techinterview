@@ -1,5 +1,5 @@
 ﻿define(['durandal/app', 'durandal/system', 'jquery', 'jquery.signalr'],
-    function (app, session, system, $, signalr) {
+    function (app, system, $, signalr) {
         var module = {
             requestId: 0,
             connect: function () {
