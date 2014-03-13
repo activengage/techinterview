@@ -1,4 +1,5 @@
 ﻿requirejs.config({
+    urlArgs: 'version=' + new Date().getTime(),
     paths: {
         'text': '../Scripts/text',
         'durandal': '../Scripts/durandal',
