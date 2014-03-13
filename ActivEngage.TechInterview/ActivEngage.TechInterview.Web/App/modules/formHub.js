@@ -1,5 +1,5 @@
 ﻿define(['durandal/app', 'durandal/system', 'jquery', 'jquery.signalr'],
-    function (app, session, system, $, signalr) {
+    function (app, system, $, signalr) {
         var module = {
             requestId: 0,
             connect: function () {
@@ -25,7 +25,7 @@
                 var requestId = this.requestId++;
                 var args = Array.prototype.slice.call(arguments, 1);
 
-                system.log(hub.hubName + ":" + requestId + " - " + methodName + " invoking ", args);
+                //system.log(hub.hubName + ":" + requestId + " - " + methodName + " invoking ", args);
                 return hub.invoke.apply(hub, $.merge([methodName], args))
                     .done(function () {
                         system.log(hub.hubName + ":" + requestId + " - " + methodName + " invoke completed");
@@ -42,9 +42,15 @@
 
             // hub event handlers
             formAdded: function (form) {
-                app.trigger('formAdded', form);
+                var Return = this.callHub("FormAdded", form);
+                return Return;
+                //app.trigger('formAdded', form);
             },
         };
+
+        /*app.on('formAdded', function (form) {
+            console.log(form.FirstName);
+        }); */
 
         return module;
     });

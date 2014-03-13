@@ -8,8 +8,10 @@
         },
         activate: function () {
             router.map([
-                { route: '', title:'Welcome', moduleId: 'viewmodels/welcome', nav: true },
-                { route: 'flickr', moduleId: 'viewmodels/flickr', nav: true }
+                { route: '', title: 'Welcome', moduleId: 'viewmodels/welcome', nav: true },
+                { route: 'FormList', title: 'Form List', moduleId: 'viewmodels/formList', nav: true },
+                { route: 'Form', title: 'Form', moduleId: 'viewmodels/form', nav: true },
+                //{ route: 'flickr', moduleId: 'viewmodels/flickr', nav: true }
             ]).buildNavigationModel();
             
             return router.activate();

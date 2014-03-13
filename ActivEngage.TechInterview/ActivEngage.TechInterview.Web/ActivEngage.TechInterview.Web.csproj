@@ -183,10 +183,14 @@
     <Content Include="App\main.js" />
     <Content Include="App\modules\formHub.js" />
     <Content Include="App\viewmodels\flickr.js" />
+    <Content Include="App\viewmodels\form.js" />
+    <Content Include="App\viewmodels\formList.js" />
     <Content Include="App\viewmodels\shell.js" />
     <Content Include="App\viewmodels\welcome.js" />
     <Content Include="App\views\detail.html" />
     <Content Include="App\views\flickr.html" />
+    <Content Include="App\views\form.html" />
+    <Content Include="App\views\formList.html" />
     <Content Include="App\views\shell.html" />
     <Content Include="App\views\welcome.html" />
     <Content Include="Content\bootstrap-responsive.css" />
@@ -304,6 +308,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
