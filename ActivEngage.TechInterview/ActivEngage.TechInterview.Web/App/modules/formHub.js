@@ -25,7 +25,7 @@
                 var requestId = this.requestId++;
                 var args = Array.prototype.slice.call(arguments, 1);
 
-                system.log(hub.hubName + ":" + requestId + " - " + methodName + " invoking ", args);
+                //system.log(hub.hubName + ":" + requestId + " - " + methodName + " invoking ", args);
                 return hub.invoke.apply(hub, $.merge([methodName], args))
                     .done(function () {
                         system.log(hub.hubName + ":" + requestId + " - " + methodName + " invoke completed");
@@ -44,7 +44,14 @@
             formAdded: function (form) {
                 app.trigger('formAdded', form);
             },
+            addForm: function (form) {
+                return this.callHub("AddForm", form);
+            }
         };
+
+        app.on('formAdded', function (form) {
+            app.showMessage('Your form has been submitted successfully with id ' + form.Id, 'Success', ['Ok']);
+        });
 
         return module;
     });

@@ -1,0 +1,22 @@
+﻿<section>
+    <h2 data-bind="html: displayName"></h2>
+    <div class="row-fluid">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" class="input-large" data-bind="value: form.FirstName" />
+    </div>
+    <div class="row-fluid">
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" class="input-large" data-bind="value: form.LastName" />
+    </div>
+    <div class="row-fluid">
+        <label for="emailAddress">Email Address:</label>
+        <input type="text" name="emailAddress" class="input-large" data-bind="value: form.EmailAddress" />
+    </div>
+    <div class="row-fluid">
+        <label for="firstName">Comment:</label>
+        <textarea class="input-large" data-bind="value: form.Comments"></textarea>
+    </div>
+    <div class="row-fluid">
+        <button class="btn-primary" data-bind="click: submit">Submit</button>
+    </div>
+</section>
