@@ -14,12 +14,11 @@
             var that = this;
             if (that.form.FirstName() != undefined && that.form.LastName() != undefined && that.form.EmailAddress() != undefined && that.form.Comments() != undefined)
             {
-                return formHub.formAdded(ko.toJS(that.form)).then(function () {
+                return formHub.addForm(ko.toJS(that.form)).then(function () {
                     that.form.FirstName(null);
                     that.form.LastName(null);
                     that.form.EmailAddress(null);
                     that.form.Comments(null);
-                    app.showMessage('Your form has been submitted successfully', 'Success', ['Ok']);
                 });
             }
             else

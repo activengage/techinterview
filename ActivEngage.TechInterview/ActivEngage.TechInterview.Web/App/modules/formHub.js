@@ -42,15 +42,16 @@
 
             // hub event handlers
             formAdded: function (form) {
-                var Return = this.callHub("FormAdded", form);
-                return Return;
-                //app.trigger('formAdded', form);
+                app.trigger('formAdded', form);
             },
+            addForm: function (form) {
+                return this.callHub("AddForm", form);
+            }
         };
 
-        /*app.on('formAdded', function (form) {
-            console.log(form.FirstName);
-        }); */
+        app.on('formAdded', function (form) {
+            app.showMessage('Your form has been submitted successfully with id ' + form.Id, 'Success', ['Ok']);
+        });
 
         return module;
     });

@@ -8,7 +8,7 @@ namespace ActivEngage.TechInterview.Web.Hubs
 {
     public class FormHub : Hub
     {
-        private static List<Form> list {get; set;}
+        private List<Form> list {get; set;}
         public FormHub()
         {
             list = new List<Form>();
@@ -23,17 +23,17 @@ namespace ActivEngage.TechInterview.Web.Hubs
                     list.Add(form);
                 }
             }
-            //list.Add(new Form() { Comments = "this is a comment", EmailAddress = "mustafa.fathy@gmail.com", FirstName = "Mustafa", LastName = "Elgharbawy", Id = "1" } );
-            return list; //new List<Form>();
+            
+            return list;
         }
-        public void FormAdded(Form form)
+        public void AddForm(Form form)
         {
             using (IDocumentSession session = MvcApplication.DocumentStore.OpenSession())
             {
                 session.Store(form);
                 session.SaveChanges();
             }
-            //list.Add(form);
+            Clients.Caller.formAdded(form);
         }
     }
 }
