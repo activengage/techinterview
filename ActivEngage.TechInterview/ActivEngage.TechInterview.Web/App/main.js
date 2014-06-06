@@ -43,5 +43,7 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'modules/form
 
         //Show the app by setting the root view model for our application with a transition.
         app.setRoot('viewmodels/shell', 'entrance');
+
+        formHub.start();
     });
 });

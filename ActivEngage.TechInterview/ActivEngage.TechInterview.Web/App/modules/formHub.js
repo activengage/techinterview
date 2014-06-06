@@ -36,13 +36,16 @@
             },
 
             // hub methods
-            getAllForms: function () {
-                return this.callHub("GetAllForms");
+            GetForms: function () {
+                return this.callHub("GetForms");
+            },
+            AddPerson: function (firstName, lastName, email, comments) {
+                return this.callHub("AddPerson", firstName, lastName, email, comments);
             },
 
             // hub event handlers
-            formAdded: function (form) {
-                app.trigger('formAdded', form);
+            addNewPersonToGrid: function (form) {
+                app.trigger('addNewPersonToGrid', form);
             },
         };
 
