@@ -1,0 +1,24 @@
+﻿<section>
+    <h2 data-bind="html: displayName"></h2>
+    <div class="row-fluid">
+        <!--<ul class="thumbnails" data-bind="foreach: images">
+            <li>
+                <a href="#" class="thumbnail" data-bind="click:$parent.select">
+                    <img style="width: 260px; height: 180px;" data-bind="attr: { src: media.m }"/>
+                </a>
+            </li>
+        </ul>-->
+
+
+        <table>
+            <tbody data-part="body" data-bind="foreach: forms">
+                <tr>
+                    <td data-bind="text: FirstName"></td>
+                    <td data-bind="text: LastName"></td>
+                    <td data-bind="text: Email"></td>
+                    <td data-bind="text: Comments"></td>                    
+                </tr>
+            </tbody>
+        </table>  
+    </div>
+</section>
